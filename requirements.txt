@@ -3,3 +3,4 @@ fastapi == 0.115.8
 pymongo == 4.7.3
 starlette == 0.45.3
 PyJWT==2.9.0
+python-multipart
