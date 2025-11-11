@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 #from fastapi.staticfiles import StaticFiles
-from routers import proyectos
+from routers import proyectos,monitores,auth_user
 from fastapi.middleware.cors import CORSMiddleware
 # Inicia el servidor: uvicorn main:app --reload
 
@@ -16,6 +16,8 @@ app.add_middleware(
 
 #routers
 app.include_router(proyectos.router)
+app.include_router(monitores.router)
+app.include_router(auth_user.router)
 
 @app.get("/")
 async def root():
